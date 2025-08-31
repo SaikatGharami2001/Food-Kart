@@ -1,21 +1,21 @@
 🍔 FoodKart
 
-FoodKart is an online food ordering web application built with React and powered by Swiggy's API.
-It provides a smooth and modern user experience for browsing restaurants, exploring menus, and ordering food — all in one place.
+FoodKart is a modern online food ordering web application built with React and powered by Swiggy's API.
+It provides a smooth and intuitive user experience for browsing restaurants, exploring menus, and placing orders — all in one place.
 
 🚀 Features
 
-📍 Browse restaurants with real-time data from Swiggy’s API
+📍 Browse Restaurants: Get real-time data from Swiggy’s API.
 
-🍕 View detailed restaurant menus
+🍕 Detailed Menus: Explore full menus for every restaurant.
 
-🛒 Add items to cart and manage orders
+🛒 Cart Management: Add items to your cart and manage your orders seamlessly.
 
-⚡ Fast and responsive UI with Tailwind CSS
+⚡ Fast & Responsive UI: Built with Tailwind CSS for a modern, responsive experience.
 
-🔗 Smooth navigation using React Router
+🔗 Smooth Navigation: Implemented using React Router.
 
-🎨 Modern design with custom HTML & CSS styling
+🎨 Modern Design: Custom styling with HTML5 & CSS3.
 
 🛠️ Tech Stack
 
