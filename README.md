@@ -6,11 +6,17 @@ It provides a smooth and modern user experience for browsing restaurants, explor
 🚀 Features
 
 📍 Browse restaurants with real-time data from Swiggy’s API
+
 🍕 View detailed restaurant menus
+
 🛒 Add items to cart and manage orders
+
 ⚡ Fast and responsive UI with Tailwind CSS
+
 🔗 Smooth navigation using React Router
+
 🎨 Modern design with custom HTML & CSS styling
+
 🛠️ Tech Stack
 
 React.js – Frontend library
