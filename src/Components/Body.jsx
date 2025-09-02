@@ -1,7 +1,13 @@
-import React from "react";
+import { lazy } from "react";
+
+const ShimmerUI = lazy(() => import("./ShimmerUI"));
 
 const Body = () => {
-  return <div>Body</div>;
+  return (
+    <div>
+      <ShimmerUI />
+    </div>
+  );
 };
 
 export default Body;
