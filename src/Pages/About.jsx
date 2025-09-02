@@ -1,4 +1,4 @@
-import { ABOUT_IMG } from "../Utils/contants";
+import { ABOUT_IMG } from "../Utils/constants";
 
 const About = () => {
   return (

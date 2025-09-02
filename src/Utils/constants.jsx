@@ -4,6 +4,9 @@ export const RES_API =
 export const RES_DATA =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.75720&lng=88.45560&restaurantId=947844&catalog_qa=undefined&query=Biryani&submitAction=ENTER";
 
+export const IMG_API =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
 export const ABOUT_IMG =
   "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=500&q=80";
 

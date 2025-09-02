@@ -3,7 +3,8 @@ import { useState, useEffect, lazy, Suspense } from "react";
 const ShimmerUI = lazy(() => import("./ShimmerUI"));
 const SearchBar = lazy(() => import("./SearchBar"));
 const Rating = lazy(() => import("./Rating"));
-const Restaurant_Cards = lazy(() => import("./Restaurant_Cards"));
+const Restaurant_Card = lazy(() => import("./Restaurant_Card"));
+const Restaurant_API = lazy(() => import("./Restaurant_API"));
 
 const Body = () => {
   const [] = useState("");
@@ -20,7 +21,8 @@ const Body = () => {
       </div>
 
       {/* Main Restaurant Body */}
-      <Restaurant_Cards />
+      <Restaurant_Card />
+      <Restaurant_API />
     </div>
   );
 };
