@@ -1,4 +1,4 @@
-const RatingFilter = () => {
+const Rating = () => {
   return (
     <div className="w-full">
       <label
@@ -21,4 +21,4 @@ const RatingFilter = () => {
   );
 };
 
-export default RatingFilter;
+export default Rating;
