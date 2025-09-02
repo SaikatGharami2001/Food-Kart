@@ -4,10 +4,14 @@ const ShimmerUI = lazy(() => import("./ShimmerUI"));
 const SearchBar = lazy(() => import("./SearchBar"));
 const Rating = lazy(() => import("./Rating"));
 const Restaurant_Card = lazy(() => import("./Restaurant_Card"));
-const Restaurant_API = lazy(() => import("./Restaurant_API"));
+
+import useRestaurant_API from "../Hooks/useRestaurant_API";
 
 const Body = () => {
-  const [] = useState("");
+  const resData = useRestaurant_API();
+  const newResData = resData?.data?.cards?.[3]?.card?.card?.info;
+  // const { name, cuisines, avgRating, id, sla } = newResData;
+  console.log(newResData?.name);
 
   return (
     <div>
@@ -21,8 +25,10 @@ const Body = () => {
       </div>
 
       {/* Main Restaurant Body */}
-      <Restaurant_Card />
-      <Restaurant_API />
+
+      {/* {resData.map((res) => (
+        <Restaurant_Card resData={res} />
+      ))} */}
     </div>
   );
 };

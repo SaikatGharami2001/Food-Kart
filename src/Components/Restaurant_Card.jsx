@@ -1,5 +1,4 @@
 import { IMG_API } from "../Utils/constants";
-import Restaurant_API from "./Restaurant_API";
 
 const Restaurant_Card = () => {
   return (

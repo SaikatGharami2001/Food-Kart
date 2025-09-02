@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { RES_API } from "../Utils/constants";
 
-const Restaurant_API = () => {
+const useRestaurant_API = () => {
   const [resData, setResData] = useState("");
 
   useEffect(() => {
@@ -17,12 +17,8 @@ const Restaurant_API = () => {
     };
     data();
   }, []);
+
+  return resData;
 };
 
-return (
-  <>
-    <></>
-  </>
-);
-
-export default Restaurant_API;
+export default useRestaurant_API;
