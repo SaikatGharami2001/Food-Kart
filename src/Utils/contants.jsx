@@ -1,6 +1,8 @@
-export const RES_API = "";
+export const RES_API =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.75720&lng=88.45560&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null";
 
-export const RES_DATA = "";
+export const RES_DATA =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=22.75720&lng=88.45560&restaurantId=947844&catalog_qa=undefined&query=Biryani&submitAction=ENTER";
 
 export const ABOUT_IMG =
   "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=500&q=80";
