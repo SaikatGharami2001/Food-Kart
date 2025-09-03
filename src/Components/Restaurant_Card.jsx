@@ -1,34 +1,36 @@
 import { IMG_API } from "../Utils/constants";
 
 const Restaurant_Card = ({ restaurantInfo }) => {
-  const { name, cuisines, avgRating, id, sla, cloudinaryImageId } =
-    restaurantInfo;
+  const { name, cuisines, avgRating, sla, cloudinaryImageId } = restaurantInfo;
 
   return (
-    <div className="max-w-xs rounded-2xl overflow-hidden shadow-lg bg-orange-100 hover:shadow-xl transition-shadow duration-300">
+    <div className="w-72 h-80 rounded-2xl overflow-hidden bg-orange-100 shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 flex flex-col">
       {/* Image */}
       <img
         src={IMG_API + cloudinaryImageId}
-        alt="Restaurant"
+        alt={name}
         className="w-full h-40 object-cover"
       />
 
       {/* Content */}
-      <div className="p-4 space-y-2">
-        <h1 className="text-lg font-bold text-gray-800">{name}</h1>
+      <div className="flex-1 p-4 flex flex-col justify-between">
+        {/* Title */}
+        <h1 className="text-lg font-bold text-gray-800 truncate">{name}</h1>
 
         {/* Rating & Delivery */}
-        <div className="flex justify-between items-center text-sm text-gray-600">
-          <span className="flex items-center gap-1">⭐ {avgRating}</span>
-          <span className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
-            {sla.deliveryTime} Min
+        <div className="flex justify-between items-center mt-2 text-sm">
+          <span className="flex items-center gap-1 text-yellow-600 font-medium">
+            ⭐ {avgRating}
+          </span>
+          <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
+            {sla?.deliveryTime} min
           </span>
         </div>
 
         {/* Cuisines */}
-        <h2 className="text-sm text-gray-500 truncate">
+        <p className="text-sm text-gray-500 mt-2 line-clamp-2">
           {cuisines.join(", ")}
-        </h2>
+        </p>
       </div>
     </div>
   );
