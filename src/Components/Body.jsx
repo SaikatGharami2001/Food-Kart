@@ -16,17 +16,21 @@ const Body = () => {
   return (
     <Suspense fallback={<ShimmerUI />}>
       <div>
-        {/* Search And Filter */}
-        <div className="flex gap-6 p-2 max-w-2xl mx-auto bg-gradient-to-r from-orange-50 to-amber-100 rounded-2xl shadow-lg">
-          <SearchBar />
-          <Rating />
-        </div>
-
-        {/* Main Restaurant Body */}
         {!newResData ? (
           <ShimmerUI />
         ) : (
-          <Restaurant_Card restaurantInfo={newResData} />
+          <>
+            {/* Search And Filter */}
+
+            <div className="flex gap-6 p-2 max-w-2xl mx-auto bg-gradient-to-r from-orange-50 to-amber-100 rounded-2xl shadow-lg">
+              <SearchBar />
+              <Rating />
+            </div>
+
+            {/* Main Restaurant Body */}
+
+            <Restaurant_Card restaurantInfo={newResData} />
+          </>
         )}
       </div>
     </Suspense>

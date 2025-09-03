@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 
 const ShimmerCards = lazy(() => import("../Components/ShimmerCards"));
+// import ShimmerCards from "../Components/ShimmerCards";
 
 const ShimmerUI = () => {
   return (
