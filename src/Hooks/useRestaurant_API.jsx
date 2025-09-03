@@ -9,7 +9,7 @@ const useRestaurant_API = () => {
       try {
         const newData = await fetch(RES_API);
         const fetchedData = await newData.json();
-        console.log(fetchedData);
+        // console.log(fetchedData);
         setResData(fetchedData);
       } catch (err) {
         console.log(err, "fetching failed");

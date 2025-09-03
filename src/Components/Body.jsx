@@ -9,14 +9,14 @@ import useRestaurant_API from "../Hooks/useRestaurant_API";
 
 const Body = () => {
   const resData = useRestaurant_API();
-  const newResData = resData?.data?.cards?.[3]?.card?.card?.info;
+  // const newResData = resData?.data?.cards?.[3]?.card?.card?.info;
   // const { name, cuisines, avgRating, id, sla } = newResData;
-  console.log(newResData);
+  // console.log(newResData);
 
   return (
     <Suspense fallback={<ShimmerUI />}>
       <div>
-        {!newResData ? (
+        {!resData ? (
           <ShimmerUI />
         ) : (
           <>
@@ -28,9 +28,14 @@ const Body = () => {
             </div>
 
             {/* Main Restaurant Body */}
-            {}
-
-            <Restaurant_Card restaurantInfo={newResData} />
+            <div className="flex gap-3 flex-wrap">
+              {resData?.data?.cards?.map((res) => (
+                <Restaurant_Card
+                  restaurantInfo={res?.card?.card?.info}
+                  key={res?.card?.card?.info?.id}
+                />
+              ))}
+            </div>
           </>
         )}
       </div>
