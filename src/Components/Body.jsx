@@ -1,6 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from "react";
+import ShimmerUI from "./ShimmerUI";
 
-const ShimmerUI = lazy(() => import("./ShimmerUI"));
 const SearchBar = lazy(() => import("./SearchBar"));
 const Rating = lazy(() => import("./Rating"));
 const Restaurant_Card = lazy(() => import("./Restaurant_Card"));
@@ -11,7 +11,7 @@ const Body = () => {
   const resData = useRestaurant_API();
   const newResData = resData?.data?.cards?.[3]?.card?.card?.info;
   // const { name, cuisines, avgRating, id, sla } = newResData;
-  console.log(newResData?.name);
+  console.log(newResData);
 
   return (
     <div>
@@ -25,10 +25,11 @@ const Body = () => {
       </div>
 
       {/* Main Restaurant Body */}
-
-      {/* {resData.map((res) => (
-        <Restaurant_Card resData={res} />
-      ))} */}
+      {!newResData ? (
+        <ShimmerUI />
+      ) : (
+        <Restaurant_Card restaurantInfo={newResData} />
+      )}
     </div>
   );
 };
