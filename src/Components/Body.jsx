@@ -28,6 +28,7 @@ const Body = () => {
             </div>
 
             {/* Main Restaurant Body */}
+            {}
 
             <Restaurant_Card restaurantInfo={newResData} />
           </>
