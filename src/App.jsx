@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import ShimmerUI from "./Components/ShimmerUI";
 
 const About = lazy(() => import("./Pages/About"));
 const Contact = lazy(() => import("./Pages/Contact"));
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-const App = () => <RouterProvider router={router} />;
+const App = () => (
+  <Suspense fallback={<ShimmerUI />}>
+    <RouterProvider router={router} />;
+  </Suspense>
+);
 
 export default App;

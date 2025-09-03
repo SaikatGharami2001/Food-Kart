@@ -14,23 +14,22 @@ const Body = () => {
   console.log(newResData);
 
   return (
-    <div>
-      {/* Search And Filter */}
-
-      <div className="flex gap-6 p-2 max-w-2xl mx-auto bg-gradient-to-r from-orange-50 to-amber-100 rounded-2xl shadow-lg">
-        <Suspense fallback={<h1>Loading</h1>}>
+    <Suspense fallback={<ShimmerUI />}>
+      <div>
+        {/* Search And Filter */}
+        <div className="flex gap-6 p-2 max-w-2xl mx-auto bg-gradient-to-r from-orange-50 to-amber-100 rounded-2xl shadow-lg">
           <SearchBar />
           <Rating />
-        </Suspense>
-      </div>
+        </div>
 
-      {/* Main Restaurant Body */}
-      {!newResData ? (
-        <ShimmerUI />
-      ) : (
-        <Restaurant_Card restaurantInfo={newResData} />
-      )}
-    </div>
+        {/* Main Restaurant Body */}
+        {!newResData ? (
+          <ShimmerUI />
+        ) : (
+          <Restaurant_Card restaurantInfo={newResData} />
+        )}
+      </div>
+    </Suspense>
   );
 };
 
