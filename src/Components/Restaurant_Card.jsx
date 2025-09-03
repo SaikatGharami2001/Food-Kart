@@ -2,7 +2,7 @@ import { IMG_API } from "../Utils/constants";
 
 const Restaurant_Card = ({ restaurantInfo }) => {
   const { name, cuisines, avgRating, sla, cloudinaryImageId } = restaurantInfo;
-  console.log(restaurantInfo);
+  // console.log(restaurantInfo);
 
   return (
     <div className="w-72 h-80 rounded-2xl overflow-hidden bg-orange-100 shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 flex flex-col cursor-pointer">
