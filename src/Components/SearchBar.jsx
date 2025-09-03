@@ -12,8 +12,7 @@ const SearchBar = () => {
   useEffect(() => {
     const data = resData?.data?.cards
       ?.map((res) => res?.card?.card?.info)
-      ?.filter((res) => res)
-      ?.map((res) => res?.name);
+      ?.filter(Boolean);
     console.log(data);
   }, [resData]);
 
