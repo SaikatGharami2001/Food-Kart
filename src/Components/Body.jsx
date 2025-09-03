@@ -28,13 +28,15 @@ const Body = () => {
             </div>
 
             {/* Main Restaurant Body */}
-            <div className="flex gap-3 flex-wrap">
-              {resData?.data?.cards?.map((res) => {
-                const info = res?.card?.card?.info;
-                return !info ? null : (
-                  <Restaurant_Card restaurantInfo={info} key={info.id} />
-                );
-              })}
+            <div className="p-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {resData?.data?.cards?.map((res) => {
+                  const info = res?.card?.card?.info;
+                  return !info ? null : (
+                    <Restaurant_Card restaurantInfo={info} key={info.id} />
+                  );
+                })}
+              </div>
             </div>
           </>
         )}

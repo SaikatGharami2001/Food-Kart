@@ -16,20 +16,20 @@ const Restaurant_Card = ({ restaurantInfo }) => {
       {/* Content */}
       <div className="flex-1 p-4 flex flex-col justify-between">
         {/* Title */}
-        <h1 className="text-lg font-bold text-gray-800 truncate">{name}</h1>
+        <h1 className="text-2xl font-bold text-gray-800 truncate">{name}</h1>
 
         {/* Rating & Delivery */}
-        <div className="flex justify-between items-center mt-2 text-sm">
+        <div className="flex justify-between items-center mt-2 text-xl">
           <span className="flex items-center gap-1 text-yellow-600 font-medium">
             ⭐ {avgRating}
           </span>
-          <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full text-xs font-semibold">
+          <span className="px-2 py-0.5 bg-green-100 text-green-700 rounded-full text-lg font-semibold">
             {sla?.deliveryTime} min
           </span>
         </div>
 
         {/* Cuisines */}
-        <p className="text-sm text-gray-500 mt-2 line-clamp-2">
+        <p className="text-lg text-gray-500 mt-2 line-clamp-2">
           {cuisines.join(", ")}
         </p>
       </div>
